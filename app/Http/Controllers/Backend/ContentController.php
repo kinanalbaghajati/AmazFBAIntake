@@ -41,7 +41,7 @@ class ContentController extends Controller
 
 //          return $data;
 
-          Mail::to('fadoua@lawfulpaths.co.uk')->send(new ContactMail($data));
+          Mail::to('ubtklant@gmail.com')->send(new ContactMail($data));
 
           return redirect()->route('thank.you');
 

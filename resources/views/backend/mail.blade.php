@@ -30,6 +30,7 @@
         .info {
             display: flex;
             justify-content: space-between;
+            gap: 60px;
         }
         .info div {
             flex: 1;
@@ -40,8 +41,8 @@
 </head>
 <body>
 <div class="container">
-    <img  src="{{asset('backend_theme/images/image1.png')}}" alt="Logo" class="logo">
-    <h2> هذا البريد الإلكتروني من : john.doe@example.com</h2>
+{{--    <img  src="{{asset('backend_theme/images/image1.png')}}" alt="Logo" class="logo">--}}
+    <h2> هذا البريد الإلكتروني من : {{$data['formValidationEmail']}}</h2>
     <div class="info">
 
         <div>
@@ -49,7 +50,7 @@
                 اسم الاول
             </h3>
             <p>
-                John
+                {{$data['formValidationUsername']}}
             </p>
         </div>
         <div>
@@ -57,7 +58,7 @@
                 اسم العائلة
             </h3>
             <p>
-                John
+               {{$data['formValidationUserFamilyName']}}
             </p>
         </div>
 
@@ -71,7 +72,7 @@
                 رقم الهاتف
             </h3>
             <p>
-                0930378114
+                {{$data['phone_number']}}  {{$data['country_code']}}
             </p>
         </div>
         <div>
@@ -79,7 +80,7 @@
                 الوضع المهني
             </h3>
             <p>
-                John
+                {{$data['customRadioTemp']}}
             </p>
         </div>
 
@@ -92,7 +93,7 @@
                 الحالة المهنية
             </h3>
             <p>
-                John
+                {{$data['customRadioTemp_work_status']}}
             </p>
         </div>
         <div>
@@ -100,7 +101,7 @@
                 راس المال
             </h3>
             <p>
-                John
+                {{$data['customRadioTemp_budget']}}
             </p>
         </div>
 
@@ -114,7 +115,7 @@
                 وفت التواصل
             </h3>
             <p>
-                John
+                {{$data['customRadioTemp_contact_time']}}
             </p>
         </div>
 
